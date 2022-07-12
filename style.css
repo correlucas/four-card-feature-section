@@ -29,7 +29,6 @@ select {
   font: inherit;
 }
 
-
 /* remove all button styles */
 button {
   all: unset;
@@ -39,7 +38,11 @@ button {
 /* colors  */
 :root {
   /* primary */
-  --dark-cyan: hsla(192, 37%, 48%, 1);
+  --red: hsla(0, 78%, 62%, 1);
+  --cyan: hsla(180, 62%, 55%, 1);
+  --blue: hsla(212, 86%, 64%, 1);
+  --yellow: hsla(34, 97%, 64%, 1);
+  --black: hsla(234, 12%, 34%, 1);
 }
 
 body {

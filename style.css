@@ -67,12 +67,6 @@ body {
 
 /* hero */
 
-.hero {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
 h1,
 .bold {
   font-weight: 300;
@@ -88,6 +82,8 @@ h1,
 }
 
 .hero p {
+  max-width: 540px;
+  margin: 0 auto;
   font-weight: 400;
   font-size: 15px;
   line-height: 25px;
@@ -96,10 +92,6 @@ h1,
   color: var(--black);
   opacity: 0.5;
   padding-top: 16px;
-}
-
-.hero-detail {
-  width: 40%;
 }
 
 
@@ -200,5 +192,39 @@ span:hover {
 
   .card-wrapper {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .container {
+    margin: 85px 32px;
+  }
+
+  h1,
+  .bold {
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.166667px;
+  }
+
+  .hero p {
+    max-width: 320px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .card-icon {
+    padding-top: 33px;
+  }
+}
+
+@media (max-width: 300px) {
+  .card {
+    text-align: center;
+  }
+
+  .card-icon {
+    justify-content: center;
   }
 }

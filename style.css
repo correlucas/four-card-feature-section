@@ -69,12 +69,33 @@ body {
 
 h1,
 .bold {
+  max-width: 540px;
+  margin: 0 auto;
   font-weight: 300;
   font-size: 36px;
   line-height: 44px;
   text-align: center;
   letter-spacing: 0.25px;
   color: var(--black);
+}
+
+.bold {
+  background: linear-gradient(270.59deg, #549EF2 -4.69%, #EA5454 32.72%, #FCAE4A 63.1%, #44D3D2 98.76%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.bold:after {
+  content: "";
+  display: flex;
+  margin: 0 auto;
+  height: 4px;
+  width: 540px;
+  margin-top: 4px;
+  transition: 0.3s;
+  position: absolute;
 }
 
 .bold {
@@ -115,6 +136,31 @@ h1,
   border-radius: 8px;
   max-width: 350px;
   box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  transition: ease-out 0.7s;
+  position: relative;
+}
+
+.card-red::before,
+.card-blue::before,
+.card-cyan::before,
+.card-yellow::before {
+  content: " ";
+  width: 100%;
+  height: 5px;
+  border-radius: 8px 8px 0 0;
+  transition: cubic-bezier(0.77, 0, 0.175, 1) 0.7s;
+  position: absolute;
+}
+
+.card:hover:before {
+  transition: ease 0.3s;
+  height: 20px;
+}
+
+.card:hover {
+  box-shadow: 0px 15px 42px -11px rgba(131, 166, 210, 0.2);
+  filter: saturate(2);
+  transition: cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
 }
 
 .card h3 {
@@ -156,36 +202,78 @@ span {
   transition: 0.5s;
 }
 
-span:hover {
-  height: 80%;
-  transition: 0.5s;
-  border-radius: 0;
+
+/* colors  */
+.red,
+.card-red::before {
+  background: linear-gradient(270deg, #EA5454 0%, rgba(255, 255, 255, 0) 157.91%);
 }
 
-.red {
-  background-color: var(--red);
+.blue,
+.card-blue::before {
+  background: linear-gradient(270deg, #549EF2 0%, rgba(255, 255, 255, 0) 157.91%);
 }
 
-.blue {
-  background-color: var(--blue);
+.cyan,
+.card-cyan::before {
+  background: linear-gradient(270deg, #44D3D2 0%, rgba(68, 211, 210, 0) 157.91%);
 }
 
-.cyan {
-  background-color: var(--cyan);
+.yellow,
+.card-yellow::before {
+  background: linear-gradient(270deg, #FCAE4A 0%, rgba(255, 255, 255, 0) 157.91%);
 }
 
-.yellow {
-  background-color: var(--yellow);
+
+.card-red:hover {
+  transform: translateY(-20px);
+  transition: cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
 }
 
+.card-yellow:hover {
+  transform: translateY(20px);
+  transition: cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
+}
+
+.card-blue:hover {
+  transform: translateX(20px);
+  transition: cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
+}
+
+.card-cyan:hover {
+  transform: translateX(-20px);
+  transition: cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
+}
+
+/* breakpoints */
 
 @media (max-width: 900px) {
+  .card-wrapper {
+    justify-items: stretch;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
   .card-icon {
     justify-content: flex-start;
   }
 }
 
-@media (max-width: 700px) {
+/* mobile */
+
+@media (max-width: 740px) {
+
+  h1,
+  .bold {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
   .card-icon {
     justify-content: flex-end;
   }
@@ -193,9 +281,25 @@ span:hover {
   .card-wrapper {
     grid-template-columns: 1fr;
   }
+
+  .card-red:hover,
+  .card-cyan:hover,
+  .card-yellow:hover,
+  .card-blue:hover {
+    transform: translateX(20px);
+  }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
+
+  h1,
+  .bold {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 400px) {
 
   .container {
     margin: 85px 32px;

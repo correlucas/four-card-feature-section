@@ -51,7 +51,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  background-image: url(./images/bg.svg);
+  background-position: center top -60px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
   line-height: 1.3;
   text-rendering: optimizeSpeed;
@@ -79,8 +83,9 @@ h1,
   color: var(--black);
 }
 
+
 .bold {
-  background: linear-gradient(270.59deg, #549EF2 -4.69%, #EA5454 32.72%, #FCAE4A 63.1%, #44D3D2 98.76%);
+  background: linear-gradient(90.2deg, #AAEAE9 0.17%, #44D3D2 13.94%, #FCAE4A 32.99%, #EA5454 66.13%, #549EF2 92.81%, #E7EEF5 101.81%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -131,13 +136,26 @@ h1,
 .card {
   display: flex;
   flex-direction: column;
-  background: white;
-  gap: 20px;
-  border-radius: 8px;
   max-width: 350px;
+  gap: 20px;
+
+  border-radius: 8px;
+  background: linear-gradient(121.94deg, #FAFAFA 0%, rgba(255, 255, 255, 0.8) 99.4%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   transition: ease-out 0.7s;
   position: relative;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 15px 42px -11px rgba(131, 166, 210, 0.2);
+  filter: saturate(1.5);
+  transition: cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
 }
 
 .card-red::before,
@@ -154,13 +172,7 @@ h1,
 
 .card:hover:before {
   transition: ease 0.3s;
-  height: 20px;
-}
-
-.card:hover {
-  box-shadow: 0px 15px 42px -11px rgba(131, 166, 210, 0.2);
-  filter: saturate(2);
-  transition: cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
+  height: 15px;
 }
 
 .card h3 {
@@ -186,6 +198,37 @@ h1,
   padding-top: 38px;
 }
 
+.h3-red,
+.h3-blue,
+.h3-yellow,
+.h3-cyan {
+  transition: ease 0.8s;
+}
+
+.h3-red:hover {
+  color: var(--red);
+  transition: ease 0.3s;
+}
+
+.h3-blue:hover {
+  color: var(--blue);
+  transition: ease 0.3s;
+}
+
+.h3-yellow:hover {
+  color: var(--yellow);
+  transition: ease 0.3s;
+}
+
+.h3-cyan:hover {
+  color: var(--cyan);
+  transition: ease 0.3s;
+}
+
+.card-padding h3:hover~.card-icon {
+  filter: blur(2px);
+}
+
 .card-padding {
   padding: 0 32px 32px 32px;
 }
@@ -201,7 +244,6 @@ span {
   border-radius: 8px 8px 0 0;
   transition: 0.5s;
 }
-
 
 /* colors  */
 .red,
@@ -247,6 +289,12 @@ span {
 
 /* breakpoints */
 
+@media (max-width: 1500px) {
+  body {
+    background-position: center top 60px;
+  }
+}
+
 @media (max-width: 900px) {
   .card-wrapper {
     justify-items: stretch;
@@ -264,6 +312,11 @@ span {
 /* mobile */
 
 @media (max-width: 740px) {
+  /* body {
+    background-size: cover;
+    background-image: url(./images/bg-mobile.svg);
+    background-position: center;
+  } */
 
   h1,
   .bold {

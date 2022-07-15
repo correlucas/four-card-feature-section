@@ -38,7 +38,7 @@ Better use for grids and flexboxes.
 
 ### Useful resources
 
-- [W3 Schools - Order](https://css.glass/) - Order Property
+- [Glassmorphism](https://css.glass/) - Order Property
 
 
 ## Author

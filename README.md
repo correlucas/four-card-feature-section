@@ -22,7 +22,7 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 ### Links
 
 - Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/product-preview-card-vanilla-css-and-custom-hover-state-on-hero-85A1JsueD1)
-- Live Site URL: [Live Site at Vercel](https://vercel.com/correlucas/four-card-feature-section)
+- Live Site URL: [Live Site at Vercel](https://four-card-feature-section-gamma-inky.vercel.app/)
 ## My process
 
 ### Built with

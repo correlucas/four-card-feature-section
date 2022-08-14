@@ -21,7 +21,7 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 
 ### Links
 
-- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/product-preview-card-vanilla-css-and-custom-hover-state-on-hero-85A1JsueD1)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/4-card-feature-section-vanilla-css-custom-design-glassmorphism-8VlJAG8Sse)
 - Live Site URL: [Live Site at Vercel](https://four-card-feature-section-gamma-inky.vercel.app/)
 ## My process
 
